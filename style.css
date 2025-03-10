@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 1rem;
+  font-family: Lato, sans-serif;
+  color: #1a162e;
+  background: #f6f6f6;
+}
+.container {
+  width: 1340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1399.98px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.price-filter {
+  margin-top: 15px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.filter-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%; /* 9/12 cột = 75% */
+}
+
+.sort-bar {
+  padding: 15px 15px 15px 0px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+}
+.sort-option {
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  margin-right: 10px;
+}
+
+.sort-option:hover {
+  background-color: #ffc234;
+  color: #fff;
+}
+.col:hover article.product-card {
+  border: 1px solid black; /* Thay đổi giá trị border theo ý muốn */
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--grid-gutter-y) * -1);
+  margin-left: calc(var(--grid-gutter-x) * 0.5 * -1);
+  margin-right: calc(var(--grid-gutter-x) * 0.5 * -1);
+}
+@media (min-width: 992px) {
+  .row-cols-lg-2 > * {
+    width: 50%; /* 2 cột = 100% / 2 = 50% */
+  }
+}
+@media (min-width: 576px) {
+  .row-cols-sm-1 > * {
+    width: 100%; /* 1 cột = 100% */
+  }
+}
+.row-cols-4 > * {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.product-card__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-card__img-wrap {
+  position: relative;
+  padding-top: 100%;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 20px 60px 10px rgb(237 237 245 / 20%);
+}
+.product-card__price {
+  color: red;
+  font-weight: 500;
+  line-height: 150%;
+  font-size: 1rem;
+}
